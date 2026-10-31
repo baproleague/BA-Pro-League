@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  font-family: 'Kanit', 'Inter', sans-serif;
+  color: #f5f5f5;
+  background: #0a0a0a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #0a0a0a;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  min-height: 78px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #242424;
+  background: #0c0c0c;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.brand b {
+  color: #ed202b;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  background: #ed202b;
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+  transform: skew(-8deg);
+}
+
+.language {
+  padding: 9px 16px;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: #151515;
+  cursor: pointer;
+}
+
+.language:hover {
+  border-color: #ed202b;
+}
+
+.nav {
+  min-height: 52px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  overflow-x: auto;
+  white-space: nowrap;
+  background: #111;
+  border-bottom: 1px solid #252525;
+}
+
+.nav a {
+  color: #aaa;
+  font-size: 13px;
+  transition: color .2s;
+}
+
+.nav a:hover {
+  color: #ed202b;
+}
+
+.hero {
+  position: relative;
+  min-height: 510px;
+  padding: 90px 10% 70px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(5,5,5,.98) 0%, rgba(5,5,5,.87) 48%, rgba(5,5,5,.3) 100%),
+    radial-gradient(ellipse at 80% 50%, #671016 0%, #23090c 35%, #090909 75%);
+  border-bottom: 3px solid #ed202b;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.eyebrow {
+  color: #ed343e;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 20px 0;
+  color: white;
+  font-size: clamp(38px, 7vw, 72px);
+  line-height: 1.15;
+  font-weight: 900;
+  white-space: pre-line;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  max-width: 480px;
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.primary-button {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 14px 25px;
+  color: white;
+  background: #ed202b;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  transition: .2s;
+}
+
+.primary-button:hover {
+  background: #bd111b;
+  transform: translateY(-2px);
+}
+
+.hero-decoration {
+  position: absolute;
+  right: 9%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 330px;
+  height: 330px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  color: rgba(255,255,255,.06);
+  font-size: 180px;
+  font-weight: 900;
+}
+
+.ball {
+  position: absolute;
+  font-size: 100px;
+  opacity: .8;
+  filter: grayscale(1);
+}
+
+.hero-bottom {
+  position: absolute;
+  right: 7%;
+  bottom: 22px;
+  color: #777;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.section {
+  padding: 75px 7%;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.section-heading h2,
+.info-card h2,
+.admin-banner h2 {
+  margin: 8px 0 0;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.section-number {
+  color: #777;
+  font-size: 12px;
+}
+
+.league-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.league-card {
+  position: relative;
+  min-height: 215px;
+  padding: 25px 20px;
+  background: linear-gradient(145deg, #1b1b1b, #101010);
+  border: 1px solid #303030;
+  transition: .25s;
+}
+
+.league-card:hover {
+  border-color: #ed202b;
+  transform: translateY(-5px);
+}
+
+.card-number {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  color: #555;
+  font-size: 12px;
+}
+
+.card-icon {
+  margin: 12px 0 18px;
+  font-size: 28px;
+  filter: grayscale(1);
+}
+
+.league-card h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.league-card p {
+  color: #888;
+  font-size: 12px;
+}
+
+.card-arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  color: #ed202b;
+  font-size: 22px;
+}
+
+.information {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.info-card {
+  min-height: 210px;
+  padding: 25px;
+  background: #121212;
+  border: 1px solid #292929;
+}
+
+.info-card h2 {
+  font-size: 21px;
+}
+
+.info-card p {
+  color: #888;
+  font-size: 13px;
+}
+
+.placeholder {
+  margin-top: 25px;
+  padding-top: 18px;
+  border-top: 1px solid #292929;
+  color: #ed343e;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.admin-banner {
+  margin: 20px 7% 75px;
+  padding: 30px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(100deg, #350b0f, #171010);
+  border: 1px solid #632027;
+}
+
+.admin-banner h2 {
+  font-size: 23px;
+}
+
+.admin-icon {
+  color: #ed343e;
+  font-size: 35px;
+}
+
+footer {
+  padding: 35px 7%;
+  background: #050505;
+  border-top: 1px solid #292929;
+}
+
+footer p {
+  color: #888;
+  font-size: 13px;
+}
+
+footer small {
+  display: block;
+  margin-top: 25px;
+  color: #555;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+  .league-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-decoration {
+    right: -100px;
+    opacity: .35;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    min-height: 68px;
+    padding: 0 5%;
+  }
+
+  .brand {
+    font-size: 15px;
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav {
+    padding: 0 5%;
+    gap: 22px;
+  }
+
+  .hero {
+    min-height: 440px;
+    padding: 65px 7%;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-decoration {
+    right: -170px;
+    opacity: .2;
+  }
+
+  .section {
+    padding: 55px 5%;
+  }
+
+  .section-heading h2 {
+    font-size: 25px;
+  }
+
+  .league-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .league-card {
+    min-height: 175px;
+  }
+
+  .information {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+  }
+
+  .admin-banner {
+    margin: 15px 5% 55px;
+    padding: 25px 20px;
+  }
+
+  .admin-banner h2 {
+    font-size: 19px;
+  }
+
+  footer {
+    padding: 30px 5%;
+  }
+}
